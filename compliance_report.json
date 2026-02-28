@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Protocol: Valid message form",
+    "passed": true,
+    "message": "Valid message accepted"
+  },
+  {
+    "name": "Protocol: Valid tool_call form",
+    "passed": true,
+    "message": "Valid tool_call accepted"
+  },
+  {
+    "name": "Protocol: Reject ambiguous (both)",
+    "passed": true,
+    "message": "Ambiguous protocol rejected"
+  },
+  {
+    "name": "Protocol: Reject invalid structure",
+    "passed": true,
+    "message": "Invalid structure rejected"
+  },
+  {
+    "name": "Runtime: Agent instantiation",
+    "passed": true,
+    "message": "Agent created successfully"
+  },
+  {
+    "name": "Runtime: Agent processes input",
+    "passed": true,
+    "message": "Agent responded: ACK: test input"
+  },
+  {
+    "name": "Runtime: Memory management",
+    "passed": true,
+    "message": "History has 2 messages"
+  },
+  {
+    "name": "Runtime: Agent reset",
+    "passed": true,
+    "message": "After reset, history has 0 messages"
+  },
+  {
+    "name": "Capability: Shell tool registered",
+    "passed": true,
+    "message": "Shell capability registered"
+  },
+  {
+    "name": "Capability: Web get tool registered",
+    "passed": true,
+    "message": "Web get capability registered"
+  },
+  {
+    "name": "Capability: Unknown tool rejected",
+    "passed": true,
+    "message": "Unknown tool is not registered"
+  },
+  {
+    "name": "Capability: Registered tool enabled",
+    "passed": true,
+    "message": "Shell capability is enabled"
+  },
+  {
+    "name": "Capability: Disable capability",
+    "passed": true,
+    "message": "Shell capability disabled"
+  },
+  {
+    "name": "Security: Protocol validation accepts valid",
+    "passed": true,
+    "message": "Valid protocol accepted"
+  },
+  {
+    "name": "Security: Protocol validation rejects invalid",
+    "passed": true,
+    "message": "Invalid protocol rejected"
+  },
+  {
+    "name": "Security: Protocol rejects ambiguous",
+    "passed": true,
+    "message": "Ambiguous protocol rejected"
+  },
+  {
+    "name": "Security: Capability gating enforced",
+    "passed": true,
+    "message": "Unknown capability denied"
+  },
+  {
+    "name": "Performance: Startup time",
+    "passed": true,
+    "message": "Startup took 0ms"
+  },
+  {
+    "name": "Performance: Protocol validation",
+    "passed": true,
+    "message": "Protocol validation within limits"
+  }
+]
