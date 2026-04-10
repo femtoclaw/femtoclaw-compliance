@@ -1,6 +1,7 @@
 use crate::framework::types::TestResult;
 use femtoclaw::{Agent, Config};
 use femtoclaw_protocol::Validator;
+use serde_json::json;
 
 pub async fn run() -> Vec<TestResult> {
     let mut results = vec![];
@@ -65,8 +66,8 @@ pub async fn run() -> Vec<TestResult> {
 
     // Test: Capability gating enforced
     if let Ok(agent) = Agent::new(Config::default()) {
-        // Try to run an unknown tool through the agent
-        let result = agent.run(r#"{"tool_call":{"tool":"unknown_tool","args":{}}}"#).await;
+        // Try to execute an unknown tool directly; should be denied by gate
+        let result = agent.execute_tool("unknown_tool", json!({})).await;
         match result {
             Err(_) => {
                 results.push(TestResult {
